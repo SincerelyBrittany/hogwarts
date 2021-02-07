@@ -2,9 +2,13 @@ import React, { Component } from "react";
 
 class HelloWorld extends Component {
   render() {
+    const pigImageStub = require("../hog-imgs/" +
+      this.props.name.toLowerCase().split(" ").join("_") +
+      ".jpg");
     return (
-      <div>
-        <h1>Hello World</h1>
+      <div className="pigTile">
+        <h3>{this.props.name}</h3>
+        <img src={pigImageStub} alt={this.props.name} />
       </div>
     );
   }
